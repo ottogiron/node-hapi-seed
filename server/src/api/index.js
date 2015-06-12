@@ -1,5 +1,7 @@
-var Hoek = require('hoek');
 
+import * as Hoek from 'hoek';
+
+import {HelloWorld} from '../hello-world';
 
 exports.register = function (server, options, next) {
 
@@ -11,7 +13,7 @@ exports.register = function (server, options, next) {
         path: options.basePath + '/',
         handler: function (request, reply) {
 
-            reply({ message: 'Welcome to the plot device.' });
+            reply({ message: 'Welcome to the Node JS HAPI Seed with ES6 Support' });
         }
     });
 

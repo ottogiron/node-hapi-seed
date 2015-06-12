@@ -1,6 +1,12 @@
 'use strict';
 
-var Hoek = require('hoek');
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
+
+var _hoek = require('hoek');
+
+var Hoek = _interopRequireWildcard(_hoek);
+
+var _helloWorld = require('../hello-world');
 
 exports.register = function (server, options, next) {
 
@@ -11,7 +17,7 @@ exports.register = function (server, options, next) {
         path: options.basePath + '/',
         handler: function handler(request, reply) {
 
-            reply({ message: 'Welcome to the plot device.' });
+            reply({ message: 'Welcome to the Node JS HAPI Seed with ES6 Support' });
         }
     });
 
