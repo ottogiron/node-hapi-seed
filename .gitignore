@@ -1,0 +1,9 @@
+node_modules
+test/artifacts/*
+.vagrant
+puppet/.tmp/
+puppet/modules/
+puppet/.librarian/
+node_modules
+bower_components
+npm-debug.log
