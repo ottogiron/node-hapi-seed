@@ -22,11 +22,13 @@
   },
   "homepage": "",
   "dependencies": {
+    "aurelia-dependency": "git+https://github.com/aurelia/dependency-injection.git#0.8.1",
     "confidence": "^1.x.x",
     "glue": "^2.x.x",
     "hapi": "^8.x.x",
     "hoek": "^2.x.x",
     "jade": "^1.x.x",
+    "require-dir": "^0.3.0",
     "visionary": "^2.x.x"
   },
   "devDependencies": {

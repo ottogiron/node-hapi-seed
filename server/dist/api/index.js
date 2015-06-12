@@ -6,8 +6,6 @@ var _hoek = require('hoek');
 
 var Hoek = _interopRequireWildcard(_hoek);
 
-var _helloWorld = require('../hello-world');
-
 exports.register = function (server, options, next) {
 
     options = Hoek.applyToDefaults({ basePath: '' }, options);

@@ -1,7 +1,7 @@
 
 import * as Hoek from 'hoek';
 
-import {HelloWorld} from '../hello-world';
+
 
 exports.register = function (server, options, next) {
 

@@ -8,7 +8,7 @@ Composer(function (err, server) {
     }
 
     server.start(function () {
-
+        //var container = new Container();
         console.log('Started the plot device on port ' + server.info.port);
     });
 });
