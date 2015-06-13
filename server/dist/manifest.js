@@ -12,13 +12,7 @@ var manifest = {
     port: Config.get('/port/web'),
     labels: ['web']
   }],
-  plugins: {
-    'visionary': {
-      engines: {jade: 'jade'},
-      path: './server/web'
-    },
-    './api/index': {basePath: '/api'}
-  }
+  plugins: {}
 };
 var store = new Confidence.Store(manifest);
 exports.get = function(key) {

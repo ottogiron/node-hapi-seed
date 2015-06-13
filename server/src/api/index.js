@@ -1,24 +1,29 @@
 
 import Hoek from 'hoek';
-exports.register = function (server, options, next) {
 
-    options = Hoek.applyToDefaults({ basePath: '' }, options);
+export class IndexRoute {
 
-
-    server.route({
-        method: 'GET',
-        path: options.basePath + '/',
-        handler: function (request, reply) {
-
-            reply({ message: 'Welcome to the Node JS HAPI Seed with ES6 Support' });
+    constructor() {
+        this.register.attributes = {
+            name: 'api'
         }
-    });
+    }
+    
+    register(server, options, next) {
+
+        options = Hoek.applyToDefaults({ basePath: '' }, options);
 
 
-    next();
-};
+        server.route({
+            method: 'GET',
+            path: options.basePath + '/',
+            handler: function (request, reply) {
+
+                reply({ message: 'Welcome to the Node JS HAPI Seed with ES6 Support' });
+            }
+        });
 
 
-exports.register.attributes = {
-    name: 'api'
-};
+        next();
+    }
+}

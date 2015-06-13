@@ -21,9 +21,10 @@
     "url": ""
   },
   "homepage": "",
-  "dependencies": {    
+  "dependencies": {
     "confidence": "^1.x.x",
     "glue": "^2.x.x",
+    "gulp-traceur": "^0.17.1",
     "hapi": "^8.x.x",
     "hoek": "^2.x.x",
     "jade": "^1.x.x",
