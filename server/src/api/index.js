@@ -1,5 +1,5 @@
-var Hoek = require('hoek');
 
+import Hoek from 'hoek';
 exports.register = function (server, options, next) {
 
     options = Hoek.applyToDefaults({ basePath: '' }, options);

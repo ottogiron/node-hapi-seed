@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/nodemon/bin/nodemon.js server",
-    "test": "./node_modules/lab/bin/lab -c -L",
+    "start": "./node_modules/nodemon/bin/nodemon.js dist/server",
+    "test": "./node_modules/lab/bin/lab dist/test -c",
     "test-cover": "./node_modules/lab/bin/lab -c -r html -o ./test/artifacts/coverage.html && open ./test/artifacts/coverage.html"
   },
   "repository": {
