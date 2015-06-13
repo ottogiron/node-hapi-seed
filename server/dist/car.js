@@ -1,35 +1,22 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-var _tire = require('./tire');
-
-var _aureliaDependencyInjection = require('aurelia-dependency-injection');
-
-var Car = (function () {
+"use strict";
+var $__tire__,
+    $__di__;
+var Tire = ($__tire__ = require("./tire"), $__tire__ && $__tire__.__esModule && $__tire__ || {default: $__tire__}).Tire;
+var Inject = ($__di__ = require("di"), $__di__ && $__di__.__esModule && $__di__ || {default: $__di__}).Inject;
+var Car = function() {
   function Car(tire) {
-    _classCallCheck(this, _Car);
-
     this.tire = tire;
   }
-
-  var _Car = Car;
-
-  _createClass(_Car, [{
-    key: 'start',
-    value: function start() {
+  return ($traceurRuntime.createClass)(Car, {start: function() {
       this.tire.roll();
-    }
-  }]);
-
-  Car = (0, _aureliaDependencyInjection.inject)(_tire.Tire)(Car) || Car;
-  return Car;
-})();
-
-exports.Car = Car;
+    }}, {});
+}();
+Object.defineProperty(Car, "annotations", {get: function() {
+    return [new Inject(Tire)];
+  }});
+Object.defineProperties(module.exports, {
+  Car: {get: function() {
+      return Car;
+    }},
+  __esModule: {value: true}
+});

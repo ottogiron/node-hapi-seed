@@ -1,7 +1,7 @@
 import {Tire} from './tire';
-import {inject} from 'aurelia-dependency-injection';
+import {Inject} from 'di';
 
-@inject(Tire)
+@Inject(Tire)
 export class Car {
   constructor(tire) {
       this.tire = tire;

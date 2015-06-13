@@ -1,5 +1,7 @@
 var Composer = require('./index');
 
+import {Injector} from 'di';
+import {Car} from './car';
 
 Composer(function (err, server) {
 
@@ -8,7 +10,10 @@ Composer(function (err, server) {
     }
 
     server.start(function () {
-        //var container = new Container();
+   	
+        var injector = new Injector();
+        var car = injector.get(Car);
+        car.start();
         console.log('Started the plot device on port ' + server.info.port);
     });
 });

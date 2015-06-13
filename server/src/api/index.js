@@ -1,7 +1,4 @@
-
-import * as Hoek from 'hoek';
-
-
+var Hoek = require('hoek');
 
 exports.register = function (server, options, next) {
 
