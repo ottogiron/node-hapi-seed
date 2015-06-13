@@ -34,10 +34,14 @@
   },
   "devDependencies": {
     "code": "^1.x.x",
+    "del": "^1.2.0",
     "gulp": "^3.9.0",
     "gulp-babel": "^5.1.0",
+    "gulp-changed": "^1.2.1",
     "gulp-nodemon": "^2.0.3",
+    "gulp-plumber": "^1.0.1",
     "lab": "^5.x.x",
-    "nodemon": "^1.x.x"
+    "nodemon": "^1.x.x",
+    "vinyl-paths": "^1.0.0"
   }
 }
