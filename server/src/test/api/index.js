@@ -1,8 +1,11 @@
+require('di/node_modules/traceur/bin/traceur-runtime');
 var Lab = require('lab');
 var Code = require('code');
 var Config = require('../../config');
 var Hapi = require('hapi');
-var IndexPlugin = require('../../api/index');
+
+import IndexPlugin from '../../api/index';
+import {Injector} from 'di';
 
 
 var lab = exports.lab = Lab.script();
@@ -11,7 +14,9 @@ var request, server;
 
 lab.beforeEach(function (done) {
 
-    var plugins = [ IndexPlugin ];
+    var injector = new Injector();
+
+    var plugins = [ injector.get(IndexPlugin) ];
     server = new Hapi.Server();
     server.connection({ port: Config.get('/port/web') });
     server.register(plugins, function (err) {

@@ -38,6 +38,7 @@
     "gulp": "^3.9.0",
     "gulp-babel": "^5.1.0",
     "gulp-changed": "^1.2.1",
+    "gulp-lab": "^1.0.5",
     "gulp-nodemon": "^2.0.3",
     "gulp-plumber": "^1.0.1",
     "lab": "^5.x.x",

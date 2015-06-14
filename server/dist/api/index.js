@@ -17,9 +17,10 @@ var IndexRoute = function() {
       next();
     }}, {});
 }();
+var $__default = IndexRoute;
 Object.defineProperties(module.exports, {
-  IndexRoute: {get: function() {
-      return IndexRoute;
+  default: {get: function() {
+      return $__default;
     }},
   __esModule: {value: true}
 });
