@@ -5,12 +5,15 @@ var babelOption = require('../babel-options');
 var paths = require('../paths');
 var plumber = require('gulp-plumber');
 var changed = require('gulp-changed');
+var sourcemaps = require('gulp-sourcemaps');
 
 // https://www.npmjs.com/package/gulp-plumber
 gulp.task('build', function () {
   return gulp.src(paths.source)
   	.pipe(plumber())
   	.pipe(changed(paths.output, {extension: '.js'}))
+    .pipe(sourcemaps.init())
     .pipe(traceur({annotations:true}))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.output));
 });
