@@ -11,7 +11,10 @@ Composer(function (err, server) {
     var indexRoute = injector.get(IndexRoute);
 
     server.register({
-    	register: indexRoute
+    	register: indexRoute,
+      options: {
+        basePath: '/api'
+      }
     }, function(err){
     	server.start(function () {
        	console.log('Started the plot device on port ' + server.info.port);
