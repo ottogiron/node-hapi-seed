@@ -39,8 +39,7 @@
     "gulp-changed": "^1.2.1",
     "gulp-lab": "^1.0.5",
     "gulp-nodemon": "^2.0.3",
-    "gulp-plumber": "^1.0.1",
-    "gulp-sourcemaps": "^1.5.2",
+    "gulp-plumber": "^1.0.1",    
     "lab": "^5.x.x",
     "nodemon": "^1.x.x",
     "vinyl-paths": "^1.0.0"

@@ -1,25 +1,34 @@
 
 import Hoek from 'hoek';
+import {Inject} from 'di';
+import {TestService} from '../../services/test-service';
 
+
+@Inject(TestService)
 export default  class IndexRoute {
 
-    constructor() {
+    constructor(testService) {
+        this.testService = testService;
         this.register.attributes = {
-            name: 'api'
+            name: 'api',
         }
+
+        this.register.testService = testService;
+
     }
 
     register(server, options, next) {
 
         options = Hoek.applyToDefaults({ basePath: '' }, options);
 
+        var testService = this.register.testService;
 
         server.route({
             method: 'GET',
             path: options.basePath + '/',
             handler: function (request, reply) {
 
-                reply({ message: 'Welcome to the Node JS HAPI Seed with ES6 Support' });
+                reply({ message: testService.getMessage()});
             }
         });
 

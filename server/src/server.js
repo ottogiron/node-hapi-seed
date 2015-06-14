@@ -1,6 +1,6 @@
 var Composer = require('./index');
 import {Injector} from 'di';
-import {IndexRoute} from './api/index';
+import IndexRoute from './routes/api/index';
 
 Composer(function (err, server) {
 
@@ -9,7 +9,7 @@ Composer(function (err, server) {
     }
     var injector = new Injector();
     var indexRoute = injector.get(IndexRoute);
-    
+
     server.register({
     	register: indexRoute
     }, function(err){
@@ -18,5 +18,5 @@ Composer(function (err, server) {
     });
     });
 
-    
+
 });
