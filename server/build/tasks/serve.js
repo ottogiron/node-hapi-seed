@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var nodemon = require('gulp-nodemon');
-require('traceur-runtime');
+
 // this task utilizes the browsersync plugin
 // to create a dev server instance
 // at http://localhost:9000

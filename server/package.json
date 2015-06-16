@@ -23,6 +23,7 @@
   "homepage": "",
   "dependencies": {
     "confidence": "^1.x.x",
+    "di": "^2.0.0-pre-14",
     "glue": "^2.x.x",
     "gulp-traceur": "^0.17.1",
     "hapi": "^8.x.x",
@@ -39,7 +40,7 @@
     "gulp-changed": "^1.2.1",
     "gulp-lab": "^1.0.5",
     "gulp-nodemon": "^2.0.3",
-    "gulp-plumber": "^1.0.1",    
+    "gulp-plumber": "^1.0.1",
     "lab": "^5.x.x",
     "nodemon": "^1.x.x",
     "vinyl-paths": "^1.0.0"
