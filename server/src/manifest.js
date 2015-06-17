@@ -1,12 +1,12 @@
 var Confidence = require('confidence');
 var Config = require('./config');
-
+import {Injector} from 'di';
 
 var criteria = {
     env: process.env.NODE_ENV
 };
 
-
+var injector = new Injector();
 var manifest = {
     $meta: 'This file defines the plot device.',
     server: {
@@ -23,8 +23,8 @@ var manifest = {
         port: Config.get('/port/web'),
         labels: ['web']
     }],
-    plugins: {     
-        //'./api/index': { basePath: '/api' }
+    plugins: {
+        './lib/routes': { paths: ['dist/routes'], injector: injector }
     }
 };
 
