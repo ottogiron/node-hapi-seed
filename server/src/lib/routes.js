@@ -16,10 +16,11 @@ exports.register = function (server, options, next) {
 				server.register({
 					register: route
 				}, function(err){
-				
+
 				 });
 			}
 		}
+		next();
 };
 
 
