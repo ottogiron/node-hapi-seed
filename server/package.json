@@ -30,6 +30,7 @@
     "hoek": "^2.x.x",
     "jade": "^1.x.x",
     "require-dir": "^0.3.0",
+    "source-map-support": "^0.3.1",
     "visionary": "^2.x.x"
   },
   "devDependencies": {
@@ -41,6 +42,7 @@
     "gulp-lab": "^1.0.5",
     "gulp-nodemon": "^2.0.3",
     "gulp-plumber": "^1.0.1",
+    "gulp-sourcemaps": "^1.5.2",
     "lab": "^5.x.x",
     "nodemon": "^1.x.x",
     "vinyl-paths": "^1.0.0"
