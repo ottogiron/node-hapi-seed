@@ -10,7 +10,7 @@ export default  class IndexRoute {
     constructor(testService) {
         this.testService = testService;
         this.register.attributes = {
-            name: 'api',
+            name: 'api0',
         }
 
         this.register.testService = testService;
@@ -25,7 +25,7 @@ export default  class IndexRoute {
 
         server.route({
             method: 'GET',
-            path: options.basePath + '/',
+            path: options.basePath + '/nestedcero',
             handler: function (request, reply) {
 
                 reply({ message: testService.getMessage()});

@@ -7,6 +7,19 @@ var Hoek = ($__hoek__ = require("hoek"), $__hoek__ && $__hoek__.__esModule && $_
 var requireDir = ($__require_45_dir__ = require("require-dir"), $__require_45_dir__ && $__require_45_dir__.__esModule && $__require_45_dir__ || {default: $__require_45_dir__}).default;
 var npath = ($__path__ = require("path"), $__path__ && $__path__.__esModule && $__path__ || {default: $__path__}).default;
 var Injector = ($__di__ = require("di"), $__di__ && $__di__.__esModule && $__di__ || {default: $__di__}).Injector;
+var extractRoutes = function(serviceObject, injector, server) {
+  if (serviceObject) {
+    if (serviceObject.default) {
+      var route = injector.get(serviceObject.default);
+      server.register({register: route}, function(err) {});
+    } else {
+      Object.keys(serviceObject).forEach(function(key) {
+        var posibleService = serviceObject[key];
+        extractRoutes(posibleService, injector, server);
+      });
+    }
+  }
+};
 exports.register = function(server, options, next) {
   var injector = new Injector();
   var options = Hoek.applyToDefaults({}, options);
@@ -21,8 +34,7 @@ exports.register = function(server, options, next) {
         {
           var absolutePath = npath.resolve(path);
           var services = requireDir(absolutePath, {recurse: true});
-          var route = injector.get(services.api.index.default);
-          server.register({register: route}, function(err) {});
+          extractRoutes(services, injector, server);
         }
       }
     } catch ($__10) {

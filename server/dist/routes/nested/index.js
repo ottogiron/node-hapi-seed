@@ -8,7 +8,7 @@ var TestService = ($___46__46__47__46__46__47_services_47_test_45_service__ = re
 var IndexRoute = function() {
   function IndexRoute(testService) {
     this.testService = testService;
-    this.register.attributes = {name: 'api'};
+    this.register.attributes = {name: 'api1'};
     this.register.testService = testService;
   }
   return ($traceurRuntime.createClass)(IndexRoute, {register: function(server, options, next) {
@@ -16,7 +16,7 @@ var IndexRoute = function() {
       var testService = this.register.testService;
       server.route({
         method: 'GET',
-        path: options.basePath + '/',
+        path: options.basePath + '/nestedone',
         handler: function(request, reply) {
           reply({message: testService.getMessage()});
         }
