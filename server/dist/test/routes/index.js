@@ -1,12 +1,12 @@
 "use strict";
-var $___46__46__47__46__46__47__46__46__47_routes_47_api_47_index__,
+var $___46__46__47__46__46__47_routes_47_index__,
     $__di__;
 require('di/node_modules/traceur/bin/traceur-runtime');
 var Lab = require('lab');
 var Code = require('code');
-var Config = require('../../../config');
+var Config = require('../../config');
 var Hapi = require('hapi');
-var IndexRoute = ($___46__46__47__46__46__47__46__46__47_routes_47_api_47_index__ = require("../../../routes/api/index"), $___46__46__47__46__46__47__46__46__47_routes_47_api_47_index__ && $___46__46__47__46__46__47__46__46__47_routes_47_api_47_index__.__esModule && $___46__46__47__46__46__47__46__46__47_routes_47_api_47_index__ || {default: $___46__46__47__46__46__47__46__46__47_routes_47_api_47_index__}).default;
+var IndexRoute = ($___46__46__47__46__46__47_routes_47_index__ = require("../../routes/index"), $___46__46__47__46__46__47_routes_47_index__ && $___46__46__47__46__46__47_routes_47_index__.__esModule && $___46__46__47__46__46__47_routes_47_index__ || {default: $___46__46__47__46__46__47_routes_47_index__}).default;
 var Injector = ($__di__ = require("di"), $__di__ && $__di__.__esModule && $__di__ || {default: $__di__}).Injector;
 var lab = exports.lab = Lab.script();
 var request,

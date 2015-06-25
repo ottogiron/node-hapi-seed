@@ -1,10 +1,10 @@
 require('di/node_modules/traceur/bin/traceur-runtime');
 var Lab = require('lab');
 var Code = require('code');
-var Config = require('../../../config');
+var Config = require('../../config');
 var Hapi = require('hapi');
 
-import IndexRoute from '../../../routes/api/index';
+import IndexRoute from '../../routes/index';
 import {Injector} from 'di';
 
 
