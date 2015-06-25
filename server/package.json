@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/nodemon/bin/nodemon.js dist/server",
-    "test": "./node_modules/lab/bin/lab  -c",
+    "test": "./node_modules/lab/bin/lab  -c  -T test/transformer.js -v",
     "test-cover": "./node_modules/lab/bin/lab -c -r html -o ./test/artifacts/coverage.html && open ./test/artifacts/coverage.html"
   },
   "repository": {

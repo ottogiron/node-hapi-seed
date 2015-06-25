@@ -1,6 +1,6 @@
 var Lab = require('lab');
 var Code = require('code');
-var Manifest = require('../manifest');
+var Manifest = require('../src/manifest');
 
 
 var lab = exports.lab = Lab.script();

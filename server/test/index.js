@@ -1,7 +1,6 @@
 var Lab = require('lab');
 var Code = require('code');
-var Composer = require('../index');
-
+var Composer = require('../src/index');
 
 var lab = exports.lab = Lab.script();
 
