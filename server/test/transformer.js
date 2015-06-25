@@ -1,5 +1,5 @@
 'use strict';
-var Babel = require('babel-core');
+
 var api = require('traceur/src/node/api.js');
 
 var options = {
