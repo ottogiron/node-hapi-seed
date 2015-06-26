@@ -1,10 +1,8 @@
 'use strict';
-
 var api = require('traceur/src/node/api.js');
 
 var options = {
     // ensure the source map works
-
      sourceMaps: 'inline',
      annotations: true
    };

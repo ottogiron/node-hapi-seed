@@ -4,8 +4,6 @@ var Code = require('code');
 var Config = require('../../src/config');
 var Hapi = require('hapi');
 
-// import IndexRoute from '../../routes/index';
-// import {Injector} from 'di';
 
 var IndexRoute = require('../../src/routes/index').default;
 var Injector = require('di').Injector;

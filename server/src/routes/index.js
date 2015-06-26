@@ -11,22 +11,17 @@ export default  class IndexRoute {
         this.register.attributes = {
             name: 'api',
         }
-
         this.register.testService = testService;
-
     }
 
     register(server, options, next) {
 
         options = Hoek.applyToDefaults({ basePath: '' }, options);
-
         var testService = this.register.testService;
-
         server.route({
             method: 'GET',
             path: options.basePath + '/',
-            handler: function (request, reply) {
-                throw  new Error('There was an unexpected error');
+            handler: function (request, reply) {        
                 reply({ message: testService.getMessage()});
             }
         });
