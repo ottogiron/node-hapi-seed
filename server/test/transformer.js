@@ -13,7 +13,7 @@ module.exports = [
         transform: function (content, filename) {
 
             // Make sure to only transform your code or the dependencies you want
-            if (filename.indexOf('src') >= 0) {
+            if (filename.indexOf('src') >= 0 || filename.indexOf('test') >=0) {
               //console.log('about transform this.', filename);
                 var result = api.compile(content, options, filename);
                 //console.log(result);
