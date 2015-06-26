@@ -34,7 +34,6 @@ exports.register = function(server, options, next) {
         {
           var absolutePath = npath.resolve(path);
           var services = requireDir(absolutePath, {recurse: true});
-          console.log('Loaded services is', services);
           extractRoutes(services, injector, server);
         }
       }

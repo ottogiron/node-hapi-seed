@@ -8,7 +8,12 @@ var config = {
       $filter: 'env',
       test: 9090,
       $default: 8080
-    }}
+    }},
+  routesLoaderPath: {
+    $filter: 'env',
+    test: './src/routes',
+    default: './dist/routes'
+  }
 };
 var store = new Confidence.Store(config);
 exports.get = function(key) {

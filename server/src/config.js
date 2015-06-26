@@ -15,6 +15,11 @@ var config = {
             test: 9090,
             $default: 8080
         }
+    },
+    routesLoaderPath: {
+      $filter: 'env',
+      test: './src/routes',
+      default: './dist/routes'
     }
 };
 

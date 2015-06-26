@@ -16,7 +16,7 @@ var manifest = {
     labels: ['web']
   }],
   plugins: {'./lib/routes': {
-      paths: ['dist/routes'],
+      paths: [Config.get('/routesLoaderPath')],
       injector: injector
     }}
 };

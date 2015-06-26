@@ -3,7 +3,6 @@ import Hoek from 'hoek';
 import {Inject} from 'di';
 import {TestService} from '../services/test-service';
 
-
 @Inject(TestService)
 export default  class IndexRoute {
 
