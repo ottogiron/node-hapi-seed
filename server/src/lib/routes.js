@@ -31,8 +31,7 @@ exports.register = function (server, options, next) {
 		if(injector){
 			for(let path of options.paths) {
 				let absolutePath = npath.resolve(path);
-				let services = requireDir(absolutePath, {recurse: true});
-
+				let services = requireDir(absolutePath, {recurse: true});				
 				extractRoutes(services, injector, server);
 
 			}
