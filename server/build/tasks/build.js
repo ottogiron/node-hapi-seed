@@ -12,6 +12,6 @@ gulp.task('build', function () {
   return gulp.src(paths.source)
   	.pipe(plumber())
   	.pipe(changed(paths.output, {extension: '.js'}))
-    .pipe(traceur({annotations:true}))
+    .pipe(traceur({annotations:true, sourceMaps:'inline'}))
     .pipe(gulp.dest(paths.output));
 });

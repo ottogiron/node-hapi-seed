@@ -19,7 +19,7 @@ var config = {
     routesLoaderPath: {
       $filter: 'env',
       test: './src/routes',
-      default: './dist/routes'
+      $default: './dist/routes'
     }
 };
 
