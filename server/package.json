@@ -23,9 +23,8 @@
   "homepage": "",
   "dependencies": {
     "confidence": "^1.x.x",
-    "di": "^2.0.0-pre-14",
+    "di": "git+https://github.com/ottogiron/di.js.git",
     "glue": "^2.x.x",
-    "gulp-traceur": "^0.17.1",
     "hapi": "^8.x.x",
     "hoek": "^2.x.x",
     "jade": "^1.x.x",
@@ -42,9 +41,10 @@
     "gulp-lab": "^1.0.5",
     "gulp-nodemon": "^2.0.3",
     "gulp-plumber": "^1.0.1",
-    "gulp-sourcemaps": "^1.5.2",
+    "gulp-traceur": "^0.17.1",
     "lab": "^5.x.x",
     "nodemon": "^1.x.x",
+    "traceur": "0.0.90",
     "vinyl-paths": "^1.0.0"
   }
 }
