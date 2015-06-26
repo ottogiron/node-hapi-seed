@@ -1,5 +1,5 @@
 var Composer = require('./index');
-
+require('source-map-support').install();
 Composer(function (err, server) {
 
     if (err) {
@@ -9,5 +9,5 @@ Composer(function (err, server) {
     server.start(function () {
        console.log('Started the plot device on port ' + server.info.port);
      });
-  
+
 });

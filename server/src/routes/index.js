@@ -26,7 +26,7 @@ export default  class IndexRoute {
             method: 'GET',
             path: options.basePath + '/',
             handler: function (request, reply) {
-
+                throw  new Error('There was an unexpected error');
                 reply({ message: testService.getMessage()});
             }
         });
