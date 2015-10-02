@@ -119,7 +119,7 @@ Starts configured servers using Glue.
 
 ### Build automation
 
-The project template uses <a href="http://gulpjs.com/">Gulp</a> for buld automation. You can define tasks under the build/tasks folder, then you can run them from the command line e.g
+The project template uses <a href="http://gulpjs.com/">Gulp</a> for build automation. You can define tasks under the build/tasks folder, then you can run them from the command line e.g
 
 ```bash
 gulp serve
