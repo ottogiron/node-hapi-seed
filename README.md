@@ -5,8 +5,7 @@ Node Hapi Seed is a Node.js project template which includes standard web project
 ## Installation
 
 ```bash
-git clone https://github.com/ottogiron/node-hapi-seed.git
-mv node-hapi-seed <my-project-name>
+git clone https://github.com/ottogiron/node-hapi-seed.git <my-project-name>
 git remote set-url origin <my-own-github-repository>
 ```
 
