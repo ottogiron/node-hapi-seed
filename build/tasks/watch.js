@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var paths = require('../paths');
 
 
 // outputs changes to files to the console
@@ -11,5 +10,5 @@ function reportChange(event){
 // to js, html, and css files and call the
 // reportChange method. Also, by depending on the
 gulp.task('watch', function() {
-  gulp.watch(paths.source, ['build']).on('change', reportChange);
+  gulp.watch(".", ['build']).on('change', reportChange);
 });
