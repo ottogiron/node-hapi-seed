@@ -1,5 +1,5 @@
 var Composer = require('./index');
-require('source-map-support').install();
+
 Composer(function (err, server) {
 
     if (err) {

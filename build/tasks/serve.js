@@ -5,11 +5,9 @@ var nodemon = require('gulp-nodemon');
 // to create a dev server instance
 // at http://localhost:9000
 gulp.task('serve', ['build', 'watch'], function() {
-  nodemon({ script: '../server/dist/server',
+  nodemon({ script: 'server',
             ext: 'html js',
-            ignore: ['src/*']
-            }
-         )
+})
    .on('start', function () {
      console.log('started!');
    });
