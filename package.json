@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server",
+    "start": "node  server",
     "test": "./node_modules/lab/bin/lab  -c   -v -S",
     "test-cover": "./node_modules/lab/bin/lab -c -r html -o ./test/artifacts/coverage.html && open ./test/artifacts/coverage.html"
   },
-  "repository":   {
+  "repository": {
     "type": "git",
     "url": ""
   },
@@ -24,16 +24,16 @@
   "dependencies": {
     "confidence": "^1.x.x",
     "di": "git+https://github.com/ottogiron/di.js.git",
+    "dotenv": "^1.2.0",
     "glue": "^2.x.x",
     "hapi": "^8.x.x",
-    "hoek": "^2.x.x"
+    "hoek": "^2.x.x",
+    "require-dir": "^0.3.0"
   },
   "devDependencies": {
     "code": "^1.x.x",
     "gulp": "^3.9.0",
-    "gulp-changed": "^1.2.1",
     "gulp-nodemon": "^2.0.3",
-    "gulp-plumber": "^1.0.1",
     "lab": "^5.x.x",
     "nodemon": "^1.x.x"
   }
