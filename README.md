@@ -79,7 +79,7 @@ exports.register.attributes = {
 When running your server in dev enviroment (gulp serve), the project will try to load an .env file using
 <a href="https://github.com/motdotla/dotenv" target="blank">Dotenv module</a>
 
-You should have an .env file in the root of your project, which will contain configuration variables that change across enviroments, such resource handles, services, data bases etc. Variables will be attached to process.env as normally happens with enviroment variables.
+You should have an .env file in the root of your project which will contain configuration variables that change across enviroments such, resource handles, services, data bases etc. Variables will be attached to process.env as normally happens with enviroment variables.
 
 **note:**
 If you don't create an .env file  when using gulp serve in your root directory you will see an error.
