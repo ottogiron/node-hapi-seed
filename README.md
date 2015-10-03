@@ -1,6 +1,6 @@
 # Node Hapi Seed
 
-Node Hapi Seed is a Node.js project template which includes standard web project features such  build automation, routes, unit testing, Dockerbuild file, configuration management, and logging.
+Node Hapi Seed is a Node.js project template which includes standard web project features such  build automation, routes, unit testing, Dockerbuild file, configuration, and logging.
 
 ## Installation
 
@@ -71,7 +71,7 @@ exports.register.attributes = {
 };
 ```
 
-### Configuration Management
+### Configuration
 
 #### .env file
 
