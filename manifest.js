@@ -22,7 +22,7 @@ var manifest = {
         labels: ['web']
     }],
     plugins: {
-      './routes/index': [{ routes: { prefix: '/api' } }]
+      './lib/plugin-loader': { paths: ['../routes']}
     }
 };
 
