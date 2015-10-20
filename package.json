@@ -23,7 +23,6 @@
   "homepage": "",
   "dependencies": {
     "confidence": "^1.x.x",
-    "di": "git+https://github.com/ottogiron/di.js.git",
     "dotenv": "^1.2.0",
     "glue": "^2.x.x",
     "hapi": "^8.x.x",

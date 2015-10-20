@@ -130,7 +130,19 @@ Contains a Dockerfile to create a docker image from the project. You can edit th
 
 **Generating the docker image**
 ```bash
-docker build -f docker/Dockerfile .
+docker build -f docker/Dockerfile -t ottogiron/hapiseed .
+```
+you can use your own image tag in this case I'm using "ottogiron/hapiseed".
+
+
+**Running a container example**
+
+```bash
+export APP_PORT=8000
+```
+
+```bash
+docker run  --rm -p ${APP_PORT}:${APP_PORT} -e APP_PORT=${APP_PORT} ottogiron/hapiseed
 ```
 
 ### Logging
