@@ -11,11 +11,11 @@ gulp.task('build-docker', function(callback){
   });
 
   dockerBuild.stdout.on('data', function (data) {
-    console.log(data.toString());
+    process.stdout.write(data.toString());
   });
 
   dockerBuild.stderr.on('data', function (data) {
-    console.log(data.toString());
+    process.stdout.write(data.toString());
   });
 
 });
