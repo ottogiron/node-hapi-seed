@@ -31,9 +31,11 @@
   },
   "devDependencies": {
     "code": "^1.x.x",
+    "dotenv": "^1.2.0",
     "gulp": "^3.9.0",
     "gulp-nodemon": "^2.0.3",
     "lab": "^5.x.x",
-    "nodemon": "^1.x.x"
+    "nodemon": "^1.x.x",
+    "require-dir": "^0.3.0"
   }
 }
