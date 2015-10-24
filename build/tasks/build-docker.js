@@ -5,7 +5,10 @@ var IMAGE_TAG = process.env.DOCKER_IMAGE_TAG || 'ottogiron/hapiseed';
 
 gulp.task('build-docker', function(callback){
 
-  var dockerBuild = exec('docker build --no-cache -f docker/Dockerfile -t '+ IMAGE_TAG +' .');
+  var dockerBuild = exec('docker build --no-cache -f docker/Dockerfile -t '+ IMAGE_TAG +' .', function(error, stout, stderr) {
+
+    return callback(error);
+  });
 
   dockerBuild.stdout.on('data', function (data) {
     console.log(data.toString());
@@ -14,7 +17,5 @@ gulp.task('build-docker', function(callback){
   dockerBuild.stderr.on('data', function (data) {
     console.log(data.toString());
   });
-
-  return callback();
 
 });
