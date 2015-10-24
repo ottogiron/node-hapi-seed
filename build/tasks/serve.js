@@ -1,4 +1,3 @@
-require('dotenv').load();
 var gulp = require('gulp');
 var nodemon = require('gulp-nodemon');
 
