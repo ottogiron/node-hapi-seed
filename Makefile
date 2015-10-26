@@ -1,5 +1,5 @@
 IMAGE_TAG = ottogiron/hapiseed
-NODE_VERSION = 4.2wer
+NODE_VERSION = 4.2
 
 all: docker-build
 
