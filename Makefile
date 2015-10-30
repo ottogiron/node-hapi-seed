@@ -1,15 +1,14 @@
-IMAGE_TAG = ottogiron/hapiseed
-NODE_VERSION = 4.2
+IMAGE_TAG ?= ottogiron/hapiseed
+NODE_VERSION ?= 4.2
+GIT_REPO = $(shell git config --get remote.origin.url)
 
 all: docker-build
 
 docker-build:
 	@docker build --no-cache -f docker/Dockerfile -t $(IMAGE_TAG) .
 
-test: npm-install-dev
-	@docker run  --rm  -v `pwd`:/usr/src/myapp -w /usr/src/myapp node:$(NODE_VERSION) npm test
+test:
+	echo $(GIT_REPO)
+	docker run --rm -e "GIT_REPO=$(GIT_REPO)" ottogiron/node-spec:4.2.1 test
 
-npm-install-dev:
-	@docker run  --rm  -v `pwd`:/usr/src/myapp -w /usr/src/myapp node:$(NODE_VERSION) npm install --development
-
-.PHONY: docker-build
+.PHONY: docker-build test
