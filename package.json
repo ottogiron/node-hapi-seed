@@ -25,7 +25,7 @@
     "confidence": "^1.x.x",
     "dotenv": "^1.2.0",
     "glue": "^2.x.x",
-    "hapi": "^8.x.x",
+    "hapi": "^11.x.x",
     "hoek": "^2.x.x",
     "require-dir": "^0.3.0"
   },
